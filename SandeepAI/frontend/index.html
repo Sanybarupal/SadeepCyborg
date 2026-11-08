@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sandeep AI</title><link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><div class="brand-mark">S</div><div><b>Sandeep AI</b><small>Personal desktop assistant</small></div></div>
+      <div class="side-label">WORKSPACE</div>
+      <button class="nav active" data-panel="chat">✦ &nbsp; AI Assistant</button>
+      <button class="nav" data-panel="files">▤ &nbsp; Workspace Files</button>
+      <div class="side-bottom"><span class="status-dot"></span><span id="connection">Checking status…</span></div>
+    </aside>
+    <main class="main">
+      <header><div><span class="eyebrow">PERSONAL AI WORKSPACE</span><h1 id="page-title">AI Assistant</h1></div><div class="top-pill"><span class="status-dot"></span> Local app</div></header>
+      <section id="chat-panel" class="panel">
+        <div class="welcome"><div class="spark">✦</div><h2>How can I help you today?</h2><p>Type a request or use the microphone supported by your browser.</p></div>
+        <div id="messages" class="messages"><div class="message assistant"><b>Sandeep AI</b><p>Hello! मैं आपका desktop assistant starter हूँ। आप मुझसे सवाल पूछ सकते हैं, website खोल सकते हैं या workspace files देख सकते हैं।</p></div></div>
+        <div class="composer"><textarea id="prompt" rows="2" placeholder="Message Sandeep AI… (e.g. Explain my project structure)"></textarea><div class="composer-actions"><button id="mic" class="icon-btn" title="Voice input">🎙</button><span class="hint">Enter to send · Shift+Enter for new line</span><button id="send" class="send-btn">Send ↑</button></div></div>
+        <div class="quick-actions"><button data-action="open">🌐 Open a website</button><button data-action="files">📁 Show workspace files</button><span>External actions require your confirmation.</span></div>
+      </section>
+      <section id="files-panel" class="panel hidden"><div class="section-head"><div><h2>Workspace Files</h2><p>Only files inside the SandeepAI/workspace folder are shown.</p></div><button id="refresh-files" class="secondary">Refresh</button></div><div id="file-list" class="file-list">Loading…</div></section>
+      <footer>Starter v0.1 · Keep API keys private · Use a trusted network</footer>
+    </main>
+  </div>
+  <script src="/static/app.js"></script>
+</body></html>
